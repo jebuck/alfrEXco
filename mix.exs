@@ -14,7 +14,7 @@ defmodule AlfrEXco.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :httpoison, :poison]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +27,9 @@ defmodule AlfrEXco.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:poison, "~> 2.0"},
+      {:httpoison, "~> 0.9.0"},
+    ]
   end
 end
